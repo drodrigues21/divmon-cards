@@ -1,0 +1,126 @@
+/* FONTS: */
+/* 
+font-family: 'Amatic SC', cursive;
+font-family: 'Architects Daughter', cursive;
+font-family: 'Bubblegum Sans', cursive;
+font-family: 'Changa', sans-serif;
+font-family: 'Cinzel', serif;
+font-family: 'Macondo', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Tangerine', cursive;
+font-family: 'Zeyada', cursive; 
+*/
+
+/* COLORS: */
+/* 
+Card wrapper: #615145
+Card background: linear-gradient(0deg, rgba(229,212,175,1) 0%, rgba(212,180,132,1) 100%);
+                 background-image: linear-gradient(to top, #e5d4af, #e1cca4, #dcc499, #d8bc8e, #d4b484);
+
+Card border: #dc8464
+Card before and after bg: #a7606b
+light text: #e5dccb
+*/
+
+
+*, *::before, *::after {
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Amatic SC', cursive;
+   margin: 0;
+}
+
+img {
+   max-width: 100%;
+   display: block;
+}
+
+.container {
+   display: flex;
+   gap: 1rem;
+   padding: 3rem;
+   overflow-x: scroll;
+}
+
+/* .container::-webkit-scrollbar {
+   width: 10px;
+   height: 10px;
+}
+.container::-webkit-scrollbar-thumb {
+   background-image: linear-gradient(to top, #e5d4af, #e1cca4, #dcc499, #d8bc8e, #d4b484);
+   border-radius: 10px;
+   box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, .25), inset -2px -2px 2px rgba(0, 0, 0, .25);
+}
+
+.container::-webkit-scrollbar-track {
+   background: #615145;
+} */
+
+.card {
+   position: relative;
+   width: 200px;
+   min-width: 150px;
+   background-color: #615145;
+   padding: 1.15rem .75rem;
+   border-radius: 16px;
+   box-shadow: -1rem 0 3rem rgb(0, 0, 0);
+   transition: all 200ms ease-in-out;
+   cursor: pointer;
+}
+
+.card:hover {
+   transform: translateY(-1rem);
+}
+
+.card:hover ~ .card {
+   transform: translateX(20px);
+}
+
+.card:not(:first-child) {
+   margin-left: -20px;
+}
+
+.card-inner {
+   position: relative;
+   border: .3rem solid #dc8464;
+   border-radius: 8px;
+}
+
+.card-inner::before, .card-inner::after {
+   width: 30px;
+   position: absolute;
+   font-size: 1.5rem;
+   text-align: center;
+   color: #e5dccb;
+   background: #a7606b;
+   border: 3px solid #dc8464;
+   border-radius: 8px;
+}
+
+.card-inner::before {
+   content: "200";
+   top: -1rem;
+   left: -1rem;
+   /* padding: .25rem; */
+}
+
+.card-inner::after {
+   content: "50";
+   bottom: -1rem;
+   right: -1rem;
+   /* padding: .25rem; */
+}
+
+.card-name {
+   background-image: linear-gradient(to top, #e5d4af, #e1cca4, #dcc499, #d8bc8e, #d4b484);
+   padding: .5rem;
+}
+
+.card-name h2 {
+   font-size: 1.25rem;
+   text-align: center;
+   margin: 0;
+}
