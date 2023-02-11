@@ -63,21 +63,11 @@ img {
    background: #615145;
 }
 
-@media screen and (min-width: 1560px) {
-   .container {
-      justify-content: center;
-   }
-
-   .container::-webkit-scrollbar-track {
-      background: transparent;
-   }
-}
-
 /* General Card styles */
 .card {
    position: relative;
    width: 200px;
-   min-width: 150px;
+   min-width: 200px;
    border-radius: 16px;
    box-shadow: -.75rem 0 2.5rem rgb(0, 0, 0);
    transition: all 200ms ease-in-out;
@@ -167,7 +157,6 @@ img {
    font-size: 1.25rem;
 }
 
-
 /* Section break */
 .section-break {
    height: 5px;
@@ -235,4 +224,21 @@ img {
    background: #cac7ca;
    margin: 0 -1.25rem;
    padding: 1rem;
+}
+
+
+
+/* Desktop */
+@media screen and (min-width: 1600px) {
+   .container {
+      justify-content: center;
+   }
+
+   .container::-webkit-scrollbar-track {
+      background: transparent;
+   }
+
+   .card {
+      min-width: 150px;
+   }
 }
