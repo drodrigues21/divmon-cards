@@ -24,7 +24,9 @@ light text: #e5dccb
 */
 
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
    box-sizing: border-box;
 }
 
@@ -53,6 +55,7 @@ img {
    width: 10px;
    height: 10px;
 }
+
 .container::-webkit-scrollbar-thumb {
    background-image: linear-gradient(to top, #e5d4af, #e1cca4, #dcc499, #d8bc8e, #d4b484);
    border-radius: 10px;
@@ -76,10 +79,10 @@ img {
 
 .card:hover {
    transform: translateY(-1rem) scale(1.05);
-   
+
 }
 
-.card:hover ~ .card {
+.card:hover~.card {
    transform: translateX(20px);
 }
 
@@ -91,7 +94,8 @@ img {
    position: relative;
 }
 
-.card-inner::before, .card-inner::after {
+.card-inner::before,
+.card-inner::after {
    position: absolute;
 }
 
@@ -115,22 +119,24 @@ img {
 
 .indie-card {
    background-color: #615145;
-   padding: 1.15rem .75rem;
+   padding: 1.7rem 1rem;
 }
 
 .indie-card--inner {
    background-image: linear-gradient(to top, #e5d4af, #e1cca4, #dcc499, #d8bc8e, #d4b484);
-   border: .3rem solid #dc8464;
+   border: .35rem solid #dc8464;
    border-radius: 8px;
 }
 
-.indie-card--inner::before, .indie-card--inner::after {
-   width: 35px;
+.indie-card--inner::before,
+.indie-card--inner::after {
+   width: 40px;
    font-size: 1.5rem;
+   font-weight: 600;
    text-align: center;
    color: #e5dccb;
    background: #a7606b;
-   border: 4px solid #dc8464;
+   border: 3px solid #dc8464;
    border-radius: 8px;
 }
 
@@ -143,9 +149,13 @@ img {
 
 .indie-card--inner::after {
    content: "50";
-   bottom: -.6rem;
+   top: -.6rem;
    right: -.6rem;
    /* padding: .25rem; */
+}
+
+.card-img--indie {
+   /* border: 3px solid red; */
 }
 
 .indie-card--name {
@@ -154,7 +164,7 @@ img {
 }
 
 .indie-card--name h3 {
-   font-size: 1.25rem;
+   font-size: 1.5rem;
 }
 
 /* Section break */
@@ -177,13 +187,14 @@ img {
    overflow: hidden;
 }
 
-.minimalist-card--inner::before, .minimalist-card--inner::after {
+.minimalist-card--inner::before,
+.minimalist-card--inner::after {
    width: 35px;
    height: 35px;
    font-size: 1rem;
    font-weight: 700;
    text-align: center;
-   color: #4b4b4b;  
+   color: #4b4b4b;
 
    display: flex;
    justify-content: center;
