@@ -1,2 +1,2 @@
 # divmon-cards
-&lt;div>'Mon cards examples
+See the project here: https://divmon-cards.netlify.app/
